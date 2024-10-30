@@ -1,0 +1,245 @@
+:root {
+    --bg-color: #e3f2fd;
+    --text-color-primary: #000;
+    --text-color-secondary: #fff;
+    --container-bg: #000;
+    --key-color: #a2a2a2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color-secondary);
+}
+
+.container {
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-color: var(--container-bg);
+}
+
+.container header {
+    color: var(--key-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input {
+    accent-color: var(--text-color-secondary);
+}
+
+.keys-check input {
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: var(--key-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.keys-check input::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;
+    background-color: var(--text-color-secondary);
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.keys-check input:checked::before {
+    left: 2.1rem;
+    background-color: var(--text-color-secondary);
+}
+
+.piano-keys {
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-keys .key {
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    user-select: none;
+    list-style: none;
+    color: var(--key-color);
+}
+
+.piano-keys .white {
+    width: 70px;
+    height: 230px;
+    border: 1px solid var(--text-color-primary);
+    border-radius: 8px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piano-keys .black {
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border: 1px solid black;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+
+.piano-keys .black.active {
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+
+.piano-keys .key.hide span {
+    display: none;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sun-icon,
+.moon-icon {
+    position: absolute;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+
+.moon-icon {
+    right: 10px;
+    opacity: 0;
+}
+
+.sun-icon {
+    left: 10px;
+}
+
+.ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.checkbox:checked + .checkbox-label {
+    background: #4a4a4a;
+}
+
+.checkbox:checked + .checkbox-label .sun-icon {
+    opacity: 0;
+}
+
+.checkbox:checked + .checkbox-label .moon-icon {
+    opacity: 1;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(30px);
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container.dark-mode {
+    background-color: #444;
+}
+
+.piano-keys .key.white {
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border: 1px solid #fff;
+}
+
+.piano-keys .key.black {
+    background: linear-gradient(#222, #000);
+    border: 1px solid #fff;
+}
+
+.dark-mode .piano-keys .key.white.active {
+    background: linear-gradient(to bottom, #fff 0%, #aaa 100%);
+}
+
+.dark-mode .piano-keys .key.black.active {
+    background: linear-gradient(to bottom, #000, #666);
+}
+
+.dark-mode .checkbox-label {
+    background: #666;
+}
+
+.dark-mode .checkbox-label .ball {
+    background: #fff;
+}
+
+.dark-mode .checkbox-label .sun-icon {
+    opacity: 0;
+}
+
+.dark-mode .checkbox-label .moon-icon {
+    opacity: 1;
+}
