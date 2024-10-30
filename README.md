@@ -1,5 +1,5 @@
 # Projeto-Simulador-Piano-Dio
- Projeto criado no Bootcamp da Dio, utilizando HTML, CSS e Javascript.
+ Projeto de um piano virtual, elaborado pela Dio. Esse conteúdo faz parte de um Bootcamp com a parceria da Ri Happy.
 
 ## Conceitos 
 - Manipulação do DOM
@@ -14,4 +14,9 @@
 ### Melhorias
 Desenvolvi para esse projeto o famoso 'Dark Mode'. Apesar de ser um tema um pouco 'desgastado', creio que era necessário aplicar em algum projeto.
 
+--- 
 
+### Dúvidas? Entre em contato
+#### Pedro Ricardo de Campos - Whatspp (15) 99752-3275
+#### E-mail: pedro.rdcampos@hotmail.com
+#### Linkedin: https://www.linkedin.com/in/pedro-ricardo-de-campos/
