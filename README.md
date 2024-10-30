@@ -1,6 +1,8 @@
 # Projeto-Simulador-Piano-Dio
  Projeto de um piano virtual, elaborado pela Dio. Esse conteúdo faz parte de um Bootcamp com a parceria da Ri Happy.
 
+ [Esse projeto pode ser visto aqui](https://pedrordcampos.github.io/projeto-simulador-piano-dio/)
+
 ## Conceitos 
 - Manipulação do DOM
 - Estilização com CSS
